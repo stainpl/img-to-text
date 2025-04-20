@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OCR Screenshot Text Extractor</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Load Tesseract.js from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <!-- Hero Section with a stylish background -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>OCR Screenshot Text Extractor</h1>
+      <p>
+        Convert your screenshots to text. Upload up to 10 pictures at once and
+        see the complete story!
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Upload Section: Choose files directly or drag & drop -->
+    <section class="upload-section">
+      <input type="file" id="file-input" multiple accept="image/*" />
+      <button id="process-button">Process Images</button>
+      <div id="drop-area">Drag &amp; Drop Images Here (Max 10)</div>
+    </section>
+
+    <!-- Output Section with loader and a neat output card -->
+    <section class="output-section">
+      <h2>Final Text Output:</h2>
+      <!-- The loader will be shown while processing -->
+      <div id="loader" class="loader" style="display: none;"></div>
+      <!-- The output card displays the final text with typewriter effect -->
+      <div class="output-card" id="output">Awaiting processing...</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
