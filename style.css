@@ -107,3 +107,16 @@ body {
     padding: 4rem 2rem;
   }
 }
+
+/* mobile override */
+@media (max-width: 600px) {
+  .output-card {
+    width: 100%;           /* fill the screen */
+    max-width: none;       /* cancel the desktop cap */
+    min-height: auto;      /* let height grow/shrink with content */
+    padding: 1rem;         /* you can even tighten padding if you like */
+    font-size: 0.9rem;     /* slightly smaller text so placeholders wrap */
+    overflow-wrap: break-word;
+    white-space: normal;   /* allow normal wrapping of the placeholder */
+  }
+}
